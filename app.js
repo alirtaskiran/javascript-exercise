@@ -44,6 +44,12 @@
 
 // toplama(konsolaYazdir, 5,10);
 
+// const student = {
+//     name: "Ali Rıza",
+//     surName: "Taşkıran",
+//     favoriGames: ["AoE","LoTR","LoL"],
+//     age: 27
+// }
 
 
 // const instructor = {...student} //SOFT COPY
@@ -62,24 +68,26 @@
 // console.log(instructor);
 
 
-const student = {
-    name: "Ali Rıza",
-    surName: "Taşkıran",
-    favoriGames: ["AoE","LoTR","LoL"],
-    age: 27
-}
+// const student = {
+//     name: "Ali Rıza",
+//     surName: "Taşkıran",
+//     favoriGames: ["AoE","LoTR","LoL"],
+//     age: 27
+// }
 
-const {name: firstName, age: nowAge} = student; 
+// const {name: firstName, age: nowAge} = student; 
 
-console.log(firstName);
-console.log(nowAge);
+// console.log(firstName);
+// console.log(nowAge);
 
 
-const getLang = () => ["Phyton","Java","C++"];
+// const getLang = () => ["Phyton","Java","C++"];
 
-const [lang1,lang2,lang3] = getLang();
+// const [lang1,lang2,lang3] = getLang();
 
-console.log(lang1);
-console.log(lang2);
-console.log(lang3);
+// console.log(lang1);
+// console.log(lang2);
+// console.log(lang3);
+
+
 
