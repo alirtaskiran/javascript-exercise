@@ -14,19 +14,19 @@
 
 // test(callback);
 
-const promise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    //resolve("islem basarili")
-    reject("islem basarisiz");
-  }, 1500);
-});
+// const promise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     //resolve("islem basarili")
+//     reject("islem basarisiz");
+//   }, 1500);
+// });
 
-promise
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((err) => {
-    console.warn(err);
-  });
+// promise
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((err) => {
+//     console.warn(err);
+//   });
 
-console.log(promise);
+// console.log(promise);
