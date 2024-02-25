@@ -63,9 +63,12 @@ class Emplooye {
 }
 
 class EmplooyeList {
+
+
   //Private
   #emplooyes;
 
+  
   constructor() {
     this.#emplooyes = [];
   }
@@ -77,6 +80,15 @@ class EmplooyeList {
       throw "You can only add Student object to the students array.";
     }
   }
+
+  get getEmplooyes() {
+    return this.#emplooyes;
+  }
+  
+  set setEmplooyes(emplooyes) {
+    this.#emplooyes = emplooyes;
+  }
+
 }
 
 const emplooye1 = new Emplooye(
@@ -107,3 +119,13 @@ emplooyeList.addEmplooye(emplooye1);
 emplooyeList.addEmplooye(emplooye2);
 
 console.log(emplooyeList);
+
+emplooye1.getFullName();
+emplooye2.getFullName();
+
+emplooye1.getCompanyInfo();
+emplooye2.getCompanyInfo();
+
+console.log(emplooyeList.getEmplooyes);
+
+console.log(emplooyes);
