@@ -24,20 +24,47 @@
 
 // console.log(employee1);
 // console.log(employee2);
-
-
+"use strict";
 function Car(marka, model, yil, tip) {
-    this.marka = marka;
-    this.model = model;
-    this.yil = yil;
-    this.tip = tip;
-  }
-  
-  const araba1 = new Car("BMW", "M5", 2015, "Sedan");
-  const araba2 = new Car("Audi", "Q7 ", 2016, "SUV");
-  const araba3 = new Car("Mercedes", "C180", 2017, "Sedan");
-  
-  
-  console.log(araba1);
-  console.log(araba2);
-  console.log(araba3);
+  this.marka = marka;
+  this.model = model;
+  this.yil = yil;
+  this.tip = tip;
+
+  Object.seal(this);    // Yeni özellik eklemeyi engelledik.
+}
+
+// Car.prototype.getInfo = function () {
+//     console.log(`Araba: ${this.marka} ${this.model} ${this.yil} ${this.tip}`);
+//   };
+
+const araba1 = new Car("BMW", "M5", 2015, "Sedan");
+const araba2 = new Car("Audi", "Q7 ", 2016, "SUV");
+const araba3 = new Car("Mercedes", "C180", 2017, "Sedan");
+const araba4 = "BU BENİM 4. ARABAM";
+
+console.log(araba1);
+console.log(araba2);
+console.log(araba3);
+
+// araba1.ikinciMarka = "TOFAŞ";
+// console.log(araba1);
+
+const hizliArabalar = [];
+
+const checkCar = function(car){
+    if(car instanceof Car){
+        hizliArabalar.push(car);
+    }
+};
+
+checkCar(araba1);
+checkCar(araba4);
+
+console.log(hizliArabalar);
+
+Car.prototype.getInfo = function () {
+    console.log(`Araba: ${this.marka} ${this.model} ${this.yil} ${this.tip}`);
+  };
+
+araba1.getInfo();
