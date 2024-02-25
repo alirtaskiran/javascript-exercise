@@ -29,11 +29,16 @@
 // console.log(person1.getPassword);
 
 class Emplooye {
+
+    
+    //Private
+    #salary = 30000;
+
+
   constructor(
     firstName,
     lastName,
     age,
-    salary,
     birthday,
     startYear,
     endYear,
@@ -42,7 +47,6 @@ class Emplooye {
     this.firstName = firstName;
     this.lastName = lastName;
     this.age = age;
-    this.salary = salary;
     this.birthday = birthday;
     this.startYear = startYear;
     this.endYear = endYear;
@@ -55,9 +59,20 @@ class Emplooye {
 
   getCompanyInfo() {
     console.log(
-      `${this.firstName} is working at ${this.company}, he started in ${this.startYear} and his salary is ${this.salary}, he ended in ${this.endYear}`
+      `${this.firstName} is working at ${this.company}, he started in ${this.startYear}, he ended in ${this.endYear}`
     );
   }
+
+
+  //Getter and Setter for salary
+  get getSalary() {
+    return this.#salary;
+  }
+  
+  set setSalary(salary) {
+    this.#salary = salary;
+  }
+  
 }
 
 const emplooye1 = new Emplooye(
@@ -73,3 +88,6 @@ const emplooye1 = new Emplooye(
 
 emplooye1.getFullName();
 emplooye1.getCompanyInfo();
+
+console.log(emplooye1);
+console.log(emplooye1.getSalary);
