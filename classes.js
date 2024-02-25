@@ -68,7 +68,7 @@ class EmplooyeList {
   //Private
   #emplooyes;
 
-  
+
   constructor() {
     this.#emplooyes = [];
   }
@@ -128,4 +128,4 @@ emplooye2.getCompanyInfo();
 
 console.log(emplooyeList.getEmplooyes);
 
-console.log(emplooyes);
+console.log(emplooyes); // not defined!
