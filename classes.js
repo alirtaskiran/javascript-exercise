@@ -29,21 +29,10 @@
 // console.log(person1.getPassword);
 
 class Emplooye {
+  //Private
+  #salary = 30000;
 
-    
-    //Private
-    #salary = 30000;
-
-
-  constructor(
-    firstName,
-    lastName,
-    age,
-    birthday,
-    startYear,
-    endYear,
-    company
-  ) {
+  constructor(firstName, lastName, age, birthday, startYear, endYear, company) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.age = age;
@@ -63,16 +52,31 @@ class Emplooye {
     );
   }
 
-
   //Getter and Setter for salary
   get getSalary() {
     return this.#salary;
   }
-  
+
   set setSalary(salary) {
     this.#salary = salary;
   }
-  
+}
+
+class EmplooyeList {
+  //Private
+  #emplooyes;
+
+  constructor() {
+    this.#emplooyes = [];
+  }
+
+  addEmplooye(emplooye) {
+    if (emplooye instanceof Emplooye) {
+      this.#emplooyes.push(emplooye);
+    } else {
+      throw "You can only add Student object to the students array.";
+    }
+  }
 }
 
 const emplooye1 = new Emplooye(
@@ -86,8 +90,20 @@ const emplooye1 = new Emplooye(
   "Turkish Technic in THY"
 );
 
-emplooye1.getFullName();
-emplooye1.getCompanyInfo();
+const emplooye2 = new Emplooye(
+  "Ahmet",
+  "Yılmaz",
+  34,
+  70000,
+  "1990-04-12",
+  2020,
+  2023,
+  "Amazon"
+);
 
-console.log(emplooye1);
-console.log(emplooye1.getSalary);
+const emplooyeList = new EmplooyeList();
+
+emplooyeList.addEmplooye(emplooye1);
+emplooyeList.addEmplooye(emplooye2);
+
+console.log(emplooyeList);
