@@ -31,22 +31,36 @@
 
 // console.log(promise);
 
+// const myPromise = new Promise((resolve, reject) => {
+//   // Uzun süren bir işlem gerçekleştiriyoruz (örneğin bir API'den veri çekiyoruz)
+//   setTimeout(() => {
+//     const randomNumber = Math.random();
+//     if (randomNumber < 0.5) { // Şartın sağlanıp sağlanmadığını rastgele belirliyoruz
+//       resolve(randomNumber); // Başarılı durum
+//     } else {  // Şart sağlanmazsa hata fırlatıyoruz
+//       reject(new Error('Bir hata oluştu')); // Başarısız durum
+//     }
+//   }, 1000);
+// });
 
-const myPromise = new Promise((resolve, reject) => {
-  // Uzun süren bir işlem gerçekleştiriyoruz (örneğin bir API'den veri çekiyoruz)
-  setTimeout(() => {
-    const randomNumber = Math.random();
-    if (randomNumber < 0.5) { // Şartın sağlanıp sağlanmadığını rastgele belirliyoruz
-      resolve(randomNumber); // Başarılı durum
-    } else {  // Şart sağlanmazsa hata fırlatıyoruz
-      reject(new Error('Bir hata oluştu')); // Başarısız durum
-    }
-  }, 1000); 
-});
+// // Promise tamamlandığında çalışacak işlemler
+// myPromise.then((result) => {
+//   console.log('İşlem başarılı:', result);
+// }).catch((error) => {
+//   console.error('İşlem başarısız:', error);
+// });
 
-// Promise tamamlandığında çalışacak işlemler
-myPromise.then((result) => {
-  console.log('İşlem başarılı:', result);
-}).catch((error) => {
-  console.error('İşlem başarısız:', error);
-});
+const URL_API = "https://jsonplaceholder.typicode.com/posts"; // API URL belirliyoruz
+
+
+
+async function getPosts() {
+  try {
+    const response = await fetch(URL_API);
+    const data = await response.json();
+    console.log(data);
+  } catch (err) {
+    console.warn(err);
+  }
+}
+getPosts();
