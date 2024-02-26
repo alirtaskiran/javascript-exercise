@@ -43,9 +43,12 @@ const araba2 = new Car("Audi", "Q7 ", 2016, "SUV");
 const araba3 = new Car("Mercedes", "C180", 2017, "Sedan");
 const araba4 = "BU BENİM 4. ARABAM";
 
+const arabalar = [araba1, araba2, araba3, araba4];
+
 console.log(araba1);
 console.log(araba2);
 console.log(araba3);
+console.log(arabalar);
 
 // araba1.ikinciMarka = "TOFAŞ";
 // console.log(araba1);
