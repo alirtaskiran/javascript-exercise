@@ -91,8 +91,6 @@
 // // console.log(newStudents.length);
 // // console.log(students);
 
-
-
 // //filter
 // console.log(
 //     students.filter(student => {
@@ -111,3 +109,84 @@
 // console.log(
 //     students.filter(student => !student.isDeleted && student.isActive)
 // );
+
+// const users = [
+//   { id: 1, name: "Alice" },
+//   { id: 2, name: "Bob" },
+//   { id: 3, name: "Charlie" },
+// ];
+
+// const userNames = users.map((user) => user.name);
+
+// userNames.forEach((name) => console.log(name));
+
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// numbers.forEach((number) => {
+//     console.log(number);
+//     });
+
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//const evenNumbers = [];
+//const evenNumbers2 = [];
+
+// const evenNumbers = numbers.map((number) => {
+//     return number * 10;
+// });
+// // evenNumbers = numbers.map( number => number * 10 );
+// console.log('evenNumbers', evenNumbers);
+
+/*
+numbers.map((number) => {
+    // if (number % 2 === 0) {
+        evenNumbers.push(number);
+    // }
+});
+console.log(evenNumbers);
+*/
+
+
+// const evenNumbers2 = numbers.filter((number) => {
+//     return number % 2 === 0; // şart fonksiyon olarak gönderilir.
+// });
+//evenNumbers2 = numbers.filter(number => number % 2 === 0);
+
+
+/*
+numbers.filter((number) => {
+    if (number % 2 === 0) {
+        evenNumbers2.push(number);
+    }
+});
+*/
+
+// console.log('evenNumbers2', evenNumbers2);
+
+// const evenNumbers3 = [];
+// numbers.forEach((number) => {
+//     evenNumbers3.push(number * 10);
+// });
+
+// console.log(evenNumbers3);
+
+
+// var fruits = ['elma', 'armut', 'muz', 'çilekli'];
+// fruits = fruits.sort((a,b) => {a.length - b.length});
+
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, -10];
+// const hasNegative = numbers.some(function(number) {
+//   return number < 0;
+// });
+
+// console.log(hasNegative); // true
+
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const allPositive = numbers.every(function(number) {
+  return number > 0;
+});
+
+console.log(allPositive); // Output: true
