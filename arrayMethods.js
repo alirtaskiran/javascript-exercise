@@ -120,13 +120,11 @@
 
 // userNames.forEach((name) => console.log(name));
 
-
 // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // numbers.forEach((number) => {
 //     console.log(number);
 //     });
-
 
 // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 //const evenNumbers = [];
@@ -147,12 +145,10 @@ numbers.map((number) => {
 console.log(evenNumbers);
 */
 
-
 // const evenNumbers2 = numbers.filter((number) => {
 //     return number % 2 === 0; // şart fonksiyon olarak gönderilir.
 // });
 //evenNumbers2 = numbers.filter(number => number % 2 === 0);
-
 
 /*
 numbers.filter((number) => {
@@ -171,10 +167,8 @@ numbers.filter((number) => {
 
 // console.log(evenNumbers3);
 
-
 // var fruits = ['elma', 'armut', 'muz', 'çilekli'];
 // fruits = fruits.sort((a,b) => {a.length - b.length});
-
 
 // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, -10];
 // const hasNegative = numbers.some(function(number) {
@@ -183,10 +177,20 @@ numbers.filter((number) => {
 
 // console.log(hasNegative); // true
 
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const findNumberIndex = numbers.findIndex(function(number) {
+//   return number > 5;
+// });
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const allPositive = numbers.every(function(number) {
-  return number > 0;
-});
+// console.log(findNumberIndex); // Output: 5
 
-console.log(allPositive); // Output: true
+let aylikMaas = [
+  24149, 24149, 24149, 24149, 23274, 22874, 23325, 23724, 23724, 21974, 21939,
+  21939
+];
+
+let yillikMaas = aylikMaas.reduce(function (total, currentValue) {
+  return total + currentValue;
+}, 0);
+
+console.log(yillikMaas);
