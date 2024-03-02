@@ -1,12 +1,23 @@
-console.log(this); 
+console.log(this);
 
-setTimeout((name) => { // Belirlediğimiz süre sonunda bir kere çalışır.
+setTimeout(
+  (name) => {
+    // Belirlediğimiz süre sonunda bir kere çalışır.
     console.log(`Merhaba ${name}`);
-}, 2000, 'Ahmet');
+  },
+  2000,
+  "Ahmet"
+);
 
 let interval = 0;
 
-setInterval(() => { // Belirlediğimiz süre sonunda sürekli çalışır.
-    console.log(`Interval = ${interval}`);
-    interval++;
-}, 3000);
+let value = setInterval(() => {
+  // Belirlediğimiz süre sonunda sürekli çalışır.
+  console.log(`Interval = ${interval}`);
+  interval++;
+}, 300);
+
+// Clear Interval
+document.getElementById("btn").addEventListener("click", () => {
+  clearInterval(value);
+});
