@@ -11,13 +11,12 @@ setTimeout(
 
 let interval = 0;
 
-let value = setInterval(() => {
-  // Belirlediğimiz süre sonunda sürekli çalışır.
+let value = setInterval(() => { // Belirlediğimiz süre boyunca çalışır.
   console.log(`Interval = ${interval}`);
   interval++;
 }, 300);
 
-// Clear Interval
+// Clear Interval, durdurma işlemi yapar.
 document.getElementById("btn").addEventListener("click", () => {
   clearInterval(value);
 });
