@@ -195,130 +195,139 @@ numbers.filter((number) => {
 
 // console.log(yillikMaas);
 
-const students = [
-    {
-      fullName: "Berkay Turna",
-      age: 25,
-      isDeleted: false,
-      score: 90,
-      isActive: true,
-      courses: ["JavaScript", "React", "Node.js"],
-      instructors: [
-        { fullName: "Orkun Durmaz", topics: ["JavaScript", "React"] },
-        { fullName: "Hicran Ertugral", topics: ["TypeScript", "Angular"] },
-      ],
-    },
-    {
-      fullName: "Cenk Grid Kaynak",
-      age: 32,
-      isDeleted: false,
-      score: 85,
-      isActive: true,
-      courses: ["JavaScript", "React Native", ".Net Core"],
-      instructors: [
-        { fullName: "Orkun Durmaz", topics: ["JavaScript", "React"] },
-        { fullName: "Korhan Kosece", topics: [".Net Core"] },
-      ],
-    },
-    {
-      fullName: "Ali Riza Taskiran",
-      age: 24,
-      isDeleted: false,
-      score: 92,
-      isActive: true,
-      courses: ["Java", "Golang"],
-      instructors: [
-        { fullName: "Akin Kaldiroglu", topics: ["Spring", "C++"] },
-        { fullName: "Buse Seker", topics: ["Problem Solving"] },
-      ],
-    },
-    {
-      fullName: "Hakan Berke Temur",
-      age: 24,
-      isDeleted: false,
-      score: 92,
-      isActive: true,
-      courses: ["Java", "Golang"],
-      instructors: [
-        { fullName: "Akin Kaldiroglu", topics: ["Spring", "C++"] },
-        { fullName: "Buse Seker", topics: ["Problem Solving"] },
-      ],
-    },
-    {
-      fullName: "Barkin Sayin",
-      age: 22,
-      isDeleted: false,
-      score: 92,
-      isActive: true,
-      courses: ["Java", "Golang"],
-      instructors: [
-        { fullName: "Akin Kaldiroglu", topics: ["Spring", "C++"] },
-        { fullName: "Buse Seker", topics: ["Problem Solving"] },
-      ],
-    },
-    {
-      fullName: "Mert Kirant",
-      age: 23,
-      isDeleted: false,
-      score: 88,
-      isActive: true,
-      courses: ["Expressjs", "Node.js"],
-      instructors: [
-        { fullName: "Orkun Durmaz", topics: ["JavaScript", "React"] },
-        { fullName: "Onder Tarım", topics: ["React Native"] },
-      ],
-    },
-    {
-      fullName: "Onur Ege Erkek",
-      age: 23,
-      isDeleted: false,
-      score: 88,
-      isActive: true,
-      courses: ["Expressjs", "Node.js"],
-      instructors: [
-        { fullName: "Orkun Durmaz", topics: ["JavaScript", "React"] },
-        { fullName: "Onder Tarım", topics: ["React Native"] },
-      ],
-    },
-    {
-      fullName: "Firat Can Tas",
-      age: 24,
-      isDeleted: false,
-      score: 60,
-      isActive: false,
-      courses: ["Expressjs", "Node.js", ".Net Core"],
-      instructors: [
-        { fullName: "Orkun Durmaz", topics: ["JavaScript", "React"] },
-        { fullName: "Onder Tarım", topics: ["React Native"] },
-      ],
-    },
-    {
-      fullName: "Ceren Dincer",
-      age: 27,
-      isDeleted: false,
-      score: 75,
-      isActive: true,
-      courses: ["JavaScript", "HTNL"],
-      instructors: [
-        { fullName: "Orkun Durmaz", topics: ["JavaScript", "React"] },
-        { fullName: "Onder Tarım", topics: ["React Native"] },
-      ],
-    },
-    {
-      fullName: "Baris Peker",
-      age: 38,
-      isDeleted: true,
-      score: 75,
-      isActive: false,
-      courses: ["JavaScript", "HTNL"],
-      instructors: [
-        { fullName: "Orkun Durmaz", topics: ["JavaScript", "React"] },
-        { fullName: "Onder Tarım", topics: ["React Native"] },
-      ],
-    },
-  ];
+// const students = [
+//     {
+//       fullName: "Berkay Turna",
+//       age: 25,
+//       isDeleted: false,
+//       score: 90,
+//       isActive: true,
+//       courses: ["JavaScript", "React", "Node.js"],
+//       instructors: [
+//         { fullName: "Orkun Durmaz", topics: ["JavaScript", "React"] },
+//         { fullName: "Hicran Ertugral", topics: ["TypeScript", "Angular"] },
+//       ],
+//     },
+//     {
+//       fullName: "Cenk Grid Kaynak",
+//       age: 32,
+//       isDeleted: false,
+//       score: 85,
+//       isActive: true,
+//       courses: ["JavaScript", "React Native", ".Net Core"],
+//       instructors: [
+//         { fullName: "Orkun Durmaz", topics: ["JavaScript", "React"] },
+//         { fullName: "Korhan Kosece", topics: [".Net Core"] },
+//       ],
+//     },
+//     {
+//       fullName: "Ali Riza Taskiran",
+//       age: 24,
+//       isDeleted: false,
+//       score: 92,
+//       isActive: true,
+//       courses: ["Java", "Golang"],
+//       instructors: [
+//         { fullName: "Akin Kaldiroglu", topics: ["Spring", "C++"] },
+//         { fullName: "Buse Seker", topics: ["Problem Solving"] },
+//       ],
+//     },
+//     {
+//       fullName: "Hakan Berke Temur",
+//       age: 24,
+//       isDeleted: false,
+//       score: 92,
+//       isActive: true,
+//       courses: ["Java", "Golang"],
+//       instructors: [
+//         { fullName: "Akin Kaldiroglu", topics: ["Spring", "C++"] },
+//         { fullName: "Buse Seker", topics: ["Problem Solving"] },
+//       ],
+//     },
+//     {
+//       fullName: "Barkin Sayin",
+//       age: 22,
+//       isDeleted: false,
+//       score: 92,
+//       isActive: true,
+//       courses: ["Java", "Golang"],
+//       instructors: [
+//         { fullName: "Akin Kaldiroglu", topics: ["Spring", "C++"] },
+//         { fullName: "Buse Seker", topics: ["Problem Solving"] },
+//       ],
+//     },
+//     {
+//       fullName: "Mert Kirant",
+//       age: 23,
+//       isDeleted: false,
+//       score: 88,
+//       isActive: true,
+//       courses: ["Expressjs", "Node.js"],
+//       instructors: [
+//         { fullName: "Orkun Durmaz", topics: ["JavaScript", "React"] },
+//         { fullName: "Onder Tarım", topics: ["React Native"] },
+//       ],
+//     },
+//     {
+//       fullName: "Onur Ege Erkek",
+//       age: 23,
+//       isDeleted: false,
+//       score: 88,
+//       isActive: true,
+//       courses: ["Expressjs", "Node.js"],
+//       instructors: [
+//         { fullName: "Orkun Durmaz", topics: ["JavaScript", "React"] },
+//         { fullName: "Onder Tarım", topics: ["React Native"] },
+//       ],
+//     },
+//     {
+//       fullName: "Firat Can Tas",
+//       age: 24,
+//       isDeleted: false,
+//       score: 60,
+//       isActive: false,
+//       courses: ["Expressjs", "Node.js", ".Net Core"],
+//       instructors: [
+//         { fullName: "Orkun Durmaz", topics: ["JavaScript", "React"] },
+//         { fullName: "Onder Tarım", topics: ["React Native"] },
+//       ],
+//     },
+//     {
+//       fullName: "Ceren Dincer",
+//       age: 27,
+//       isDeleted: false,
+//       score: 75,
+//       isActive: true,
+//       courses: ["JavaScript", "HTNL"],
+//       instructors: [
+//         { fullName: "Orkun Durmaz", topics: ["JavaScript", "React"] },
+//         { fullName: "Onder Tarım", topics: ["React Native"] },
+//       ],
+//     },
+//     {
+//       fullName: "Baris Peker",
+//       age: 38,
+//       isDeleted: true,
+//       score: 75,
+//       isActive: false,
+//       courses: ["JavaScript", "HTNL"],
+//       instructors: [
+//         { fullName: "Orkun Durmaz", topics: ["JavaScript", "React"] },
+//         { fullName: "Onder Tarım", topics: ["React Native"] },
+//       ],
+//     },
+//   ];
 
-console.log(students.some((student) => student.score > 82));
-console.log(students.some((student) => student.score > 95));
+// console.log(students.some((student) => student.score > 82));
+// console.log(students.some((student) => student.score > 95));
 
-console.log(students.findIndex((student) => student.fullName === "Ali Riza Taskiran"));
+// console.log(students.findIndex((student) => student.fullName === "Ali Riza Taskiran"));
+
+// console.log(students.sort((a, b) => a.score - b.score));
+// console.log(students.sort((a,b) => a.fullName > b.fullName ? 1 : -1));
+
+const firstNumbers = [3,9,7,6,8,10,20,23,89,97];
+
+const evenNumbers = firstNumbers.filter((number) => number % 2 === 0);
+let secondNumbers = evenNumbers.map((number) => number * 5);
+console.log(secondNumbers.reduce((total, currentValue) => total + currentValue, 0));
