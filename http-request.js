@@ -19,49 +19,54 @@ function fetchData(url) {
 }
 
 // Kullanımı
-fetchData('veri.json')
+const value = fetchData('https://jsonplaceholder.typicode.com/albums')
   .then(function(data) {
     console.log('Veri alındı:', data);
     // Veri işleme işlemleri burada yapılabilir
+    const arr = JSON.parse(data);
+    console.log(arr);
   })
   .catch(function(error) {
     console.error('Hata oluştu:', error);
   });
 
-try {
-  const data = await fetchData('veri.json');
-  console.log('Veri alındı:', data);
-  // Veri işleme işlemleri burada yapılabilir
-} catch (error) {
-  console.error('Hata oluştu:', error);
-}
 
-class Request {
-  constructor() {
-    this.xhr = new XMLHttpRequest();
-  }
+  console.log(value);
 
-  // GET Request
+// try {
+//   const data = await fetchData('https://jsonplaceholder.typicode.com/albums');
+//   console.log('Veri alındı:', data);
+//   // Veri işleme işlemleri burada yapılabilir
+// } catch (error) {
+//   console.error('Hata oluştu:', error);
+// }
 
-  get(url) {
+// class Request {
+//   constructor() {
+//     this.xhr = new XMLHttpRequest();
+//   }
+
+//   // GET Request
+
+//   get(url) {
     
-    this.xhr.open("GET", url);
-    this.xhr.onload = () => {
-      console.log(this.xhr);
-        if(this.xhr.status === 200){
-          console.log(this.xhr.responseText);
-        }
-    }
-    this.xhr.send();
+//     this.xhr.open("GET", url);
+//     this.xhr.onload = () => {
+//       console.log(this.xhr);
+//         if(this.xhr.status === 200){
+//           console.log(this.xhr.responseText);
+//         }
+//     }
+//     this.xhr.send();
 
-  }
-}
+//   }
+// }
 
-const request = new Request();
-request.get("https://jsonplaceholder.typicode.com/albums", function(response){
-  console.log(response);
-});
+// const request = new Request();
+// request.get("https://jsonplaceholder.typicode.com/albums", function(response){
+//   console.log(response);
+// });
 
-console.log(albums); 
+// console.log(albums); 
 
 /* */
