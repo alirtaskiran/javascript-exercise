@@ -70,33 +70,57 @@
 
 // /* */
 
-// XHR
+// XHR + PROMISE
 
 const jspURI = "https://jsonplaceholder.typicode.com";
 
-const getRequest = (endpoint, callback) => {
-  const xhr = new XMLHttpRequest();
+const getRequest = (endpoint) => {
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.addEventListener("readystatechange", (err, data) => {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        const data = JSON.parse(xhr.responseText);
+        resolve(data);
+      } else if (xhr.readyState === 4) {
+        reject(xhr.status);
+      }
+    });
 
-  xhr.addEventListener("readystatechange", (err, data) => {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      const data = JSON.parse(xhr.responseText);
-      callback(null, data);
-    } else if (xhr.readyState === 4) {
-      console.warn(`An error occurred: ${xhr.status} - ${xhr.statusText}`);
-    }
+    xhr.open("GET", endpoint);
+    xhr.send();
   });
-
-  xhr.open("GET", endpoint);
-  xhr.send();
 };
 
-getRequest(`${jspURI}/albums`, (err, data) => {
-  if (err) {
-    console.error(err);
-  } else {
-    console.log(data);
-  }
-});
+getRequest(`${jspURI}/users/1`)
+.then((data) => {
+  console.log(data);
+  return getRequest(`${jspURI}/users/2`);
+})
+.then((data) => {
+  console.log(data);
+  return getRequest(`${jspURI}/users/3`);
+})
+.then((data) => {
+  console.log(data);
+})
+.catch((err) => console.log(err))
+
+// const myFunction = async () => {
+//   try {
+//     const user1 = await getRequest(`${jspURI}/users/1`);
+//     console.log(user1);
+//     const user2 = await getRequest(`${jspURI}/users/2`);
+//     console.log(user2);
+//     const user3 = await getRequest(`${jspURI}/users/3`);
+//     console.log(user3);
+//   }
+//   catch (err) {
+//     console.error(err);
+// }
+// };
+
+// myFunction();
+  
 
 console.log("Hello WORRRLLLDD!!!");
 console.log("Hello WORRRLLLDD!!!");
