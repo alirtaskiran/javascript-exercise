@@ -72,38 +72,38 @@
 
 // XHR + PROMISE
 
-const jspURI = "https://jsonplaceholder.typicode.com";
+// const jspURI = "https://jsonplaceholder.typicode.com";
 
-const getRequest = (endpoint) => {
-  return new Promise((resolve, reject) => {
-    const xhr = new XMLHttpRequest();
-    xhr.addEventListener("readystatechange", (err, data) => {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-        const data = JSON.parse(xhr.responseText);
-        resolve(data);
-      } else if (xhr.readyState === 4) {
-        reject(xhr.status);
-      }
-    });
+// const getRequest = (endpoint) => {
+//   return new Promise((resolve, reject) => {
+//     const xhr = new XMLHttpRequest();
+//     xhr.addEventListener("readystatechange", (err, data) => {
+//       if (xhr.readyState === 4 && xhr.status === 200) {
+//         const data = JSON.parse(xhr.responseText);
+//         resolve(data);
+//       } else if (xhr.readyState === 4) {
+//         reject(xhr.status);
+//       }
+//     });
 
-    xhr.open("GET", endpoint);
-    xhr.send();
-  });
-};
+//     xhr.open("GET", endpoint);
+//     xhr.send();
+//   });
+// };
 
-getRequest(`${jspURI}/users/1`)
-.then((data) => {
-  console.log(data);
-  return getRequest(`${jspURI}/users/2`);
-})
-.then((data) => {
-  console.log(data);
-  return getRequest(`${jspURI}/users/3`);
-})
-.then((data) => {
-  console.log(data);
-})
-.catch((err) => console.log(err))
+// getRequest(`${jspURI}/users/1`)
+// .then((data) => {
+//   console.log(data);
+//   return getRequest(`${jspURI}/users/2`);
+// })
+// .then((data) => {
+//   console.log(data);
+//   return getRequest(`${jspURI}/users/3`);
+// })
+// .then((data) => {
+//   console.log(data);
+// })
+// .catch((err) => console.log(err))
 
 // const myFunction = async () => {
 //   try {
@@ -122,9 +122,6 @@ getRequest(`${jspURI}/users/1`)
 // myFunction();
   
 
-console.log("Hello WORRRLLLDD!!!");
-console.log("Hello WORRRLLLDD!!!");
-console.log("Hello WORRRLLLDD!!!");
 
 // getRequest(`${jspURI}/albums`, (err, data) => {
 //   if (err) {
@@ -149,3 +146,44 @@ console.log("Hello WORRRLLLDD!!!");
 //     console.log(data);
 //   }
 // });
+
+// console.log("Hello WORRRLLLDD!!!");
+// console.log("Hello WORRRLLLDD!!!");
+// console.log("Hello WORRRLLLDD!!!");
+
+
+// const newTodo = {
+//   userId: 66,
+//   title: "lorem ipsum",
+//   completed: false
+// }
+
+// // ADDED NEW TODO
+// fetch('https://jsonplaceholder.typicode.com/todos', {
+//   method: 'POST',
+//   body: JSON.stringify(newTodo),
+//   headers: {
+//     "Content-type": "application/json; charset=UTF-8"
+//   }
+// })
+
+// .then(data => console.log(data))
+
+// // UPDATE TODO
+
+// fetch('https://jsonplaceholder.typicode.com/todos/1', {
+//   method
+
+// // DELETE TODO
+
+// fetch('https://jsonplaceholder.typicode.com/todos/1', {
+//   method: 'DELETE'
+// })
+
+// fetch('https://jsonplaceholder.typicode.com/todos/1')
+// .then(response => response.json())
+// .then(data => console.log(data))
+
+// await yazdığın kodu bekletir ama fonksiyonun kendisini bekletmez
+
+// getCommentsWithAwait 

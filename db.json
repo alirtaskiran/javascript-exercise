@@ -1,0 +1,58 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "username": "johndoe87",
+        "email": "john.doe@example.com",
+        "full_name": "John Doe",
+        "birthdate": "1987-05-12",
+        "country": "USA",
+        "job_title": "Software Engineer"
+      },
+      {
+        "id": 2,
+        "username": "janedoe79",
+        "email": "jane.doe@example.com",
+        "full_name": "Jane Doe",
+        "birthdate": "1979-09-28",
+        "country": "Canada",
+        "job_title": "Graphic Designer"
+      },
+      {
+        "id": 3,
+        "username": "mike.jackson",
+        "email": "mike.jackson@example.com",
+        "full_name": "Mike Jackson",
+        "birthdate": "1990-03-15",
+        "country": "UK",
+        "job_title": "Data Scientist"
+      }
+    ],
+    "posts": [
+      {
+        "id": 1,
+        "title": "The Art of Programming",
+        "content": "In this post, we explore the intricacies of programming and its impact on modern technology.",
+        "author_id": 1,
+        "created_at": "2024-03-10T08:30:00Z",
+        "tags": ["programming", "technology", "coding"]
+      },
+      {
+        "id": 2,
+        "title": "Design Trends in 2024",
+        "content": "Discover the latest design trends shaping the digital landscape in 2024.",
+        "author_id": 2,
+        "created_at": "2024-03-09T14:45:00Z",
+        "tags": ["design", "web", "ux"]
+      },
+      {
+        "id": 3,
+        "title": "Data Science and AI Applications",
+        "content": "Exploring the intersection of data science and artificial intelligence in various industries.",
+        "author_id": 3,
+        "created_at": "2024-03-08T10:20:00Z",
+        "tags": ["data science", "artificial intelligence", "machine learning"]
+      }
+    ]
+  }
+  
