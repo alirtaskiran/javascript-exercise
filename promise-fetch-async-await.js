@@ -2,8 +2,6 @@
 // Fulfilled (Gerçekleşme): İşlemin başarılı bir şekilde tamamlanma durumu.
 // Rejected (Red): İşlemin bir nedenden dolayı tamamlanamama durumu.
 
-
-
 // const test = callback => {
 //     setTimeout(() => {
 //         callback("Hata oluştu!", [])
@@ -58,8 +56,6 @@
 
 // const URL_API = "https://jsonplaceholder.typicode.com/posts"; // API URL belirliyoruz
 
-
-
 // async function getPosts() {
 //   try {
 //     const response = await fetch(URL_API);
@@ -75,31 +71,16 @@
 //     .then(res => res.json())
 //     .then(data => console.log(data))
 //     .catch(err => console.warn(err));
-    
-    
 
-// Asenkron bir fonksiyon oluşturalım, bu fonksiyon bir süre bekleyip bir mesaj döndürecek
-function mesajGonder() {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      resolve('Merhaba, dünya!');
-    }, 2000); // 2 saniye sonra resolve edilecek
-  });
+class Request {
+  get(url) {
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((err) => console.warn(err));
+  }
 }
 
-// Asenkron işlemleri await kullanarak senkron bir şekilde yönetebiliriz
-async function anaFonksiyon() {
-  console.log('İşlem başladı.');
+const request = new Request();
+request.get("https://jsonplaceholder.typicode.com/posts");
 
-  // mesajGonder fonksiyonunu çağırırken await kullanarak sonucun gelmesini bekleyelim
-  const mesaj = await mesajGonder();
-
-  // Asenkron işlem tamamlandıktan sonra burası çalışacak
-  console.log(mesaj);
-
-  console.log('İşlem bitti.');
-}
-
-// anaFonksiyon'u çağıralım
-anaFonksiyon();
-  
